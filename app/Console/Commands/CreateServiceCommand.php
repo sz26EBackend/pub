@@ -7,8 +7,8 @@ use Illuminate\Console\Attributes\Signature;
 use Illuminate\Console\Command;
 use Illuminate\Console\GeneratorCommand;
 
-#[Signature('app:create-service-command')]
-#[Description('Command description')]
+// #[Signature('app:create-service-command')]
+// #[Description('Command description')]
 
 class CreateServiceCommand extends GeneratorCommand {
     
