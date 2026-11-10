@@ -4,6 +4,6 @@ namespace {{ namespace }};
 
 class {{ class }} {
 
-	public function __construct__ {}
+    public function __construct__ {}
 	
 }
