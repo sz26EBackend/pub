@@ -135,6 +135,20 @@ return [
             'path' => storage_path('logs/laravel.log'),
         ],
 
+        "create_drink" => [
+            "driver" => "daily",
+            "name" => "CREATE-DRINK",
+            "path" => storage_path( "logs/create_drink.log" ),
+            "level" => "notice",
+            "days" => 7,
+            "formatter" => Monolog\Formatter\LineFormatter::class,
+            "formatter_with" => [
+                "format" => "[%datetime%] %channel%.%level_name% %message% \n %context% %extra% \n"
+            ],
+            "dateFormat" => "Y-m-d H:i:s",
+            "allowInLineLineBreak" => true,
+            "ignoreEmptyContextAndExtra" => true,
+        ],
     ],
 
 ];

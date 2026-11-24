@@ -37,4 +37,20 @@ class DrinkController extends Controller {
 
         return $this->sendResponse( $result, "Sikeres kiírás", 201 );
     }
+
+    public function update( Drink $drink, DrinkRequest $request ) {
+
+        $validated = $request->validated();
+
+        $drink = $this->drinkService->updateDrink( $drink, $validated );
+
+        return $this->sendResponse( $drink->name, "Sikeres frissítés", 201 );
+    }
+
+    public function delete( Drink $drink ) {
+
+        $this->drinkService->destroy( $drink );
+
+        return $this->sendResponse( $drink->name, "Sikeres törlés" );
+    }
 }
